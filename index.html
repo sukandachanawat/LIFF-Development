@@ -64,19 +64,19 @@
 
     async function getFriendship() {
     }
-
     async function sendMsg() {
       if (liff.getContext().type !== "none") {
-          await liff.sendMessages([
-            {
-              "type": "sticker",
-              "stickerId": 10551377,
-              "packageId": 6136    
-            }
-          ])
-          alert("Message sent")
+        await liff.sendMessages([
+          {
+            "type": "sticker",
+            "stickerId": 1,
+            "packageId": 1
+          }
+        ])
+        alert("Message sent")
       }
     }
+    
 
     function getContext() {
       document.getElementById("type").append(liff.getContext().type)

@@ -16,7 +16,7 @@
   <p id="userId"><b>userId:</b> </p>
   <p id="displayName"><b>displayName:</b> </p>
   <p id="statusMessage"><b>statusMessage:</b> </p>
-  <p id="decodedIDToken"><b>email:</b> </p>
+  <!-- <p id="decodedIDToken"><b>email:</b> </p>-->
   <p id="type"><b>type:</b> </p>
   <p id="viewType"><b>viewType:</b> </p>
   <p id="utouId"><b>utouId:</b> </p>
@@ -66,6 +66,15 @@
     }
 
     async function sendMsg() {
+      if (liff.getContext().type !== "none"){
+          await liff.sendMessages([
+            {
+              "type": "sticker",
+              "stickerId": 1,
+              "packageId": 1    
+            }
+          ])
+      }
     }
 
     function getContext() {
